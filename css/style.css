@@ -524,12 +524,11 @@ h1, h2, h3, h4, h5, h6, figure {
   font-size: 16px; }
 
 #colorlib-intro {
-  z-index: 0;
-  padding-bottom: 4em; }
+  margin-top: -40px;
+ }
 
 .third-col {
   padding: 2em;
-  margin-top: -40px;
   z-index: 1;
   width: 50%;
   background: #00274C;
@@ -658,12 +657,12 @@ h1, h2, h3, h4, h5, h6, figure {
   float: left; }
 
 .colorlib-heading {
-  margin-bottom: 5em; 
+  /* margin-bottom: 5em;  */
   margin-top: 10em;}
   .colorlib-heading.colorlib-heading-sm {
     margin-bottom: 2em; }
   .colorlib-heading h2 {
-    font-size: 40px;
+    font-size: 35px;
     margin-bottom: 20px;
     line-height: 1.5;
     color: #10b730;
@@ -734,18 +733,23 @@ h1, h2, h3, h4, h5, h6, figure {
   text-align: center;
   margin-bottom: 30px; }
   .colorlib-staff img {
-    width: 100%;
-    margin-bottom: 20px; }
+    width: 30%;
+    margin-bottom: 20px;
+    border-radius: 50%;
+  }
   .colorlib-staff h3 {
     font-size: 24px;
     margin-bottom: 5px; }
+/* 
   .colorlib-staff p {
-    margin-bottom: 30px; }
+    margin-bottom: 30px; } */
+
   .colorlib-staff .role {
     color: #1E3E34;
     margin-bottom: 30px;
     font-weight: normal;
-    display: block; }
+    display: block; 
+  }
 
 #colorlib-started {
   padding: 3em 0 0 0;
@@ -1269,6 +1273,8 @@ h1, h2, h3, h4, h5, h6, figure {
 
   .about-us-con-head{
     color: #1E3E34;
+    text-align: justify;
+    font-size: 18px;
   }
   .slider-text-inner .Heading{
     font-size: 45px;
@@ -1280,13 +1286,20 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 
   .about-list{
-    color: #10b730;
+    color: #000;
+    text-align: justify;
+    font-size: 16px;
+  }
+  .about-list li{
+    margin-bottom: 15px; /* Add space between the list items */
+    line-height: 1.6; /
   }
   .select-dropdown{
     background-color: #00274C;
   }
   #our-Service{
-    color:#960000
+    color:#960000;
+    margin-left: 250px;
   }
   #service-text{
     color: #00274C;
@@ -1329,4 +1342,70 @@ h1, h2, h3, h4, h5, h6, figure {
   .nav-scrolled {
     background-color: rgba(0, 39, 76, 0.7); /* A transparent shade of #00274C */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow when scrolled */
+}
+
+/* sidenav css */
+.side-nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 2px;
+}
+
+.side-nav li {
+  margin-bottom: 10px;
+}
+
+.side-nav li a {
+  display: block;
+  padding: 10px 15px;
+  text-align: left;
+  text-decoration: none;
+  color: #333; /* Default text color */
+  background-color: #f8f9fa; /* Light background for links */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+}
+
+/* Hover effect */
+.side-nav li a:hover {
+  background-color: #f0f0f0;
+  color: #333;
+  padding-left: 30px; /* Keep padding consistent on hover */
+  border-left: 5px solid #960000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.side-nav li.active a::before {
+  content: '';
+  position: absolute;
+  left: -20px; /* Position arrow outside the text */
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 10px; /* Size of the arrow */
+  border-style: solid;
+  border-color: transparent transparent transparent #10b730; /* Arrow shape and color */
+}
+
+/* Active page style */
+.side-nav li.active a {
+  background-color: #960000; /* Active background color */
+  color: #fff; /* Active text color */
+  font-weight: bold;
+  border-left: 5px solid #960000; /* Left border highlight */
+  padding-left: 30px; /* Indent to make space for arrow */
+  position: relative; /* For positioning the arrow */
+}
+
+/* Optional: Add a small underline for the active link */
+
+.services-img img {
+  width: 120%; /* Ensure the image takes up full column width */
+  margin-top: 150px;
+  margin-left: 20px;
+  border-radius: 5%; /* Maintain aspect ratio */
+}
+.column{
+  margin-top:2px;
 }
