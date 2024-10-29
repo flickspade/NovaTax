@@ -85,9 +85,11 @@ h1, h2, h3, h4, h5, h6, figure {
   font-family: "Playfair Display", Georgia, serif; }
 
   .colorlib-nav #colorlib-logo img {
-    max-width: 100%;  /* Ensures the image doesn't exceed its container's width */
-    height: auto;     /* Maintains the aspect ratio of the image */
-    display: block;   /* Removes any inline space around the image */
+    min-width: 170%;
+    height: 270px;
+    display: block;
+    margin-top: -50px;
+    margin-left: -155px;
   }
   .colorlib-nav #colorlib-logo a {
     color: #00274C; }
@@ -106,8 +108,12 @@ h1, h2, h3, h4, h5, h6, figure {
   padding: 45px;
   margin: 5px 0 0 0; }
   .colorlib-nav ul li {
-    padding: 0;
-    margin: 0;
+    list-style: none;
+    display: inline;
+    text-transform: uppercase; }
+.navbarclass li:not(#dropdownServices li) {
+    padding: 10px;
+    margin: 7px;
     list-style: none;
     display: inline;
     text-transform: uppercase; }
@@ -134,7 +140,7 @@ h1, h2, h3, h4, h5, h6, figure {
         top: 40px;
         left: 0;
         text-align: left;
-        background:  rgba(0, 39, 76, 0.7);
+        background:  #00274C;
         padding: 20px;
         -webkit-border-radius: 4px;
         -moz-border-radius: 4px;
@@ -331,7 +337,7 @@ h1, h2, h3, h4, h5, h6, figure {
       min-height: 700px;
       z-index: 9; }
       #colorlib-hero .flexslider .slider-text > .slider-text-inner {
-        display: table-cell;
+        /* display: table-cell; */
         vertical-align: middle;
         min-height: 700px; }
         #colorlib-hero .flexslider .slider-text > .slider-text-inner h1, #colorlib-hero .flexslider .slider-text > .slider-text-inner h2 {
@@ -528,9 +534,10 @@ h1, h2, h3, h4, h5, h6, figure {
  }
 
 .third-col {
+  margin-left: 232px;
   padding: 2em;
   z-index: 1;
-  width: 50%;
+  width: 60%;
   background: #00274C;
   color: #fff;
   position: relative;
@@ -585,8 +592,10 @@ h1, h2, h3, h4, h5, h6, figure {
       line-height: 40px;
       color: #00274C; }
   .services:hover, .services:focus {
-    background: #31486f;
-    color: rgba(255, 255, 255, 0.7); }
+    background: #00274C;
+    color: #fff;
+    /* color: rgba(255, 255, 255, 0.7);  */
+  }
     .services:hover h3 a, .services:focus h3 a {
       color: #fff; }
       .desc:hover p, .desc:focus p {
@@ -659,6 +668,37 @@ h1, h2, h3, h4, h5, h6, figure {
 .colorlib-heading {
   /* margin-bottom: 5em;  */
   margin-top: 10em;}
+  .colorlib-heading-index {
+    /* margin-bottom: 5em;  */
+    margin-top: 4em;}
+    .colorlib-heading-index.colorlib-heading-sm {
+      margin-bottom: 2em; }
+      .colorlib-heading-index h2 {
+        font-size: 35px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+        color: #10b730;
+        font-weight: 400; }
+        .colorlib-heading-index p {
+          font-size: 18px;
+          line-height: 1.5;
+          color: #10b730; }
+        .colorlib-heading-index span {
+          display: block;
+          margin-bottom: 10px;
+          text-transform: uppercase;
+          font-size: 12px;
+          letter-spacing: 2px; }
+        .colorlib-heading-index.colorlib-heading2 h2 {
+          font-size: 60px;
+          font-weight: 700; }
+        .colorlib-heading-index.colorlib-heading2 p {
+          font-size: 24px;
+          margin-bottom: 40px; }
+
+
+
+
   .colorlib-heading.colorlib-heading-sm {
     margin-bottom: 2em; }
   .colorlib-heading h2 {
@@ -1277,6 +1317,7 @@ h1, h2, h3, h4, h5, h6, figure {
     font-size: 18px;
   }
   .slider-text-inner .Heading{
+    margin-top:340px;
     font-size: 45px;
     color: #fff;
   }
@@ -1310,6 +1351,7 @@ h1, h2, h3, h4, h5, h6, figure {
   }
   
   .colorlib-nav {
+    height: 120px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -1340,7 +1382,7 @@ h1, h2, h3, h4, h5, h6, figure {
   border-color: #960000 !important; }
 
   .nav-scrolled {
-    background-color: rgba(0, 39, 76, 0.7); /* A transparent shade of #00274C */
+    background-color:#00274C;  /* A transparent shade of #00274C */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow when scrolled */
 }
 
@@ -1408,4 +1450,28 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .column{
   margin-top:2px;
+}
+.row{
+  margin-top: -10px;
+}
+
+.card {
+  background-color: rgba(0, 39, 76, 0.1); /* Light shade of #00274C */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h3 {
+  color: #00274C;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #333333;
+  line-height: 1.6;
 }
