@@ -130,28 +130,26 @@ h1, h2, h3, h4, h5, h6, figure {
       position: relative; }
       .colorlib-nav ul li.has-dropdown .dropdown {
         width: 220px;
-        -webkit-box-shadow: 0px 14px 33px -9px rgba(0, 39, 76, 0.7);
-        -moz-box-shadow: 0px 14px 33px -9px rgba(0, 39, 76, 0.7);
         box-shadow: 0px 14px 33px -9px rgba(0, 0, 0, 0.75);
         z-index: 1002;
-        visibility: hidden;
-        opacity: 0;
         position: absolute;
         top: 40px;
-        left: 0;
+        left: -55px;
         text-align: left;
-        background:  #00274C;
+        background: #00274C;
         padding: 20px;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        -ms-border-radius: 4px;
         border-radius: 4px;
-        -webkit-transition: 0s;
-        -o-transition: 0s;
-        transition: 0s; }
+        transition: opacity 0.2s ease, visibility 0.2s ease;
+        opacity: 0;
+        visibility: hidden;
+      }
+      .colorlib-nav ul li.has-dropdown:hover .dropdown {
+      opacity: 1;
+      visibility: visible;
+      }
         .colorlib-nav ul li.has-dropdown .dropdown:before {
           bottom: 100%;
-          left: 40px;
+          left: 5.8em;
           border: solid transparent;
           content: " ";
           height: 0;
@@ -179,7 +177,7 @@ h1, h2, h3, h4, h5, h6, figure {
               font-weight: bold }
       .colorlib-nav ul li.has-dropdown:hover a, .colorlib-nav ul li.has-dropdown:focus a {
         color: #c80000;
-      font-weight: bold; }
+       }
     .colorlib-nav ul li.btn-cta a {
       padding: 15px !important;
       color: #fff; }
@@ -224,12 +222,12 @@ h1, h2, h3, h4, h5, h6, figure {
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 20px; /* Distance between text and underline */
+        bottom: 4px; /* Distance between text and underline */
         height: 2px; /* Thickness of the underline */
         background-color: #960000; /* Color of the underline */
     }
       .colorlib-nav ul li.has-dropdown ul li.active > a {
-        color: #960000;
+        color: #c80000;
         font-weight: bold;
     }
 
@@ -329,8 +327,8 @@ h1, h2, h3, h4, h5, h6, figure {
           right: 0;
           content: '';
           background: rgba(0, 0, 0, 0.4);
-          /* z-index: 1;  */
-        }
+          /* z-index: 1; */
+         }
     #colorlib-hero .flexslider .flex-control-nav {
       bottom: 40px;
       z-index: 1000; }
@@ -549,16 +547,14 @@ h1, h2, h3, h4, h5, h6, figure {
  }
 
 .third-col {
-  margin-left: 115px;
+  margin-left: 13.5%;
   padding: 2em;
   z-index: 2;
-  width: 60%;
+  width: 80%;
   background: #00274C;
   color: #fff;
   position: relative;
   overflow: hidden; 
-  top: -5.5em;
-
   margin-top: -10%;
 }
   @media screen and (max-width: 768px) {
@@ -651,7 +647,7 @@ h1, h2, h3, h4, h5, h6, figure {
     margin: 0 0 30px 0;
     list-style: none;
     position: relative; }
-    .colorlib-contact-info ul li:before {
+    /* .colorlib-contact-info ul li:before {
       color: #bea34d;
       position: absolute;
       left: 0;
@@ -663,7 +659,6 @@ h1, h2, h3, h4, h5, h6, figure {
       font-variant: normal;
       text-transform: none;
       line-height: 1;
-      /* Better Font Rendering =========== */
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale; }
     .colorlib-contact-info ul li.address:before {
@@ -677,7 +672,7 @@ h1, h2, h3, h4, h5, h6, figure {
       content: "\e9da"; }
     .colorlib-contact-info ul li.url:before {
       font-size: 23px;
-      content: "\e9af"; }
+      content: "\e9af"; } */
 
 .features {
   margin-bottom: 3em;
@@ -1012,20 +1007,18 @@ h1, h2, h3, h4, h5, h6, figure {
       #colorlib-offcanvas ul li > ul {
         padding-left: 20px;
         display: none; }
-      #colorlib-offcanvas ul li.offcanvas-has-dropdown > a {
+      /* #colorlib-offcanvas ul li.offcanvas-has-dropdown > a {
         display: block;
         position: relative; }
         #colorlib-offcanvas ul li.offcanvas-has-dropdown > a:after {
           position: absolute;
           right: 0px;
           font-family: 'icomoon';
-          speak: none;
           font-style: normal;
           font-weight: normal;
           font-variant: normal;
           text-transform: none;
           line-height: 1;
-          /* Better Font Rendering =========== */
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
           content: "\e921";
@@ -1039,7 +1032,7 @@ h1, h2, h3, h4, h5, h6, figure {
         -moz-transform: rotate(-180deg);
         -ms-transform: rotate(-180deg);
         -o-transform: rotate(-180deg);
-        transform: rotate(-180deg); }
+        transform: rotate(-180deg); } */
 
 .uppercase {
   font-size: 14px;
@@ -1397,7 +1390,6 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .colorlib-nav ul li a:hover {
     color: #c80000;
-    font-weight: bold;
 }
 .btnReqSrvs:hover, .btnReqSrvs:focus, .btnReqSrvs:active {
   color: #fff;
@@ -1406,7 +1398,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
   .nav-scrolled {
     background-color:#00274C;  /* A transparent shade of #00274C */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow when scrolled */
 }
 
 /* sidenav css */
@@ -1479,7 +1471,6 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .card {
-  background-color: rgba(0, 39, 76, 0.1);
   padding: 20px;
   border-radius: 10px;
   width: 600px;
@@ -1508,7 +1499,6 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .cardAfter {
-  background-color: rgba(0, 39, 76, 0.1); /* Light shade of #00274C */
   padding: 20px;
   border-radius: 10px;
   width: 600px; /* Set a fixed width */
@@ -1543,14 +1533,17 @@ h1, h2, h3, h4, h5, h6, figure {
   margin-right: auto;
 }
 
+#card1,#card3,#card5,#card7,#card9{
+  background-color: rgb(230, 247, 233)
+}
+#card2,#card4,#card6,#card8,#card10{
+background-color: rgba(0, 39, 76, 0.1);
+
+}
+
 
 @media (min-width: 1200px) {
   .practiseAreascontainer {
       width: 1170px;
   }
-}
-}
-
-#navbar {
-  z-index: 2;
 }
