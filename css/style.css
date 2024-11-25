@@ -84,12 +84,17 @@ h1, h2, h3, h4, h5, h6, figure {
   font-weight: 700;
   font-family: "Playfair Display", Georgia, serif; }
 
-  .colorlib-nav #colorlib-logo img {
+  .colorlib-nav #colorlib-logo a {
     min-width: 170%;
-    height: 270px;
+    height: 230px;
     display: block;
-    margin-top: -50px;
-    margin-left: -155px;
+    margin-top: -150px;
+    margin-left: -315px;
+  }
+  .colorlib-nav #colorlib-logo a img {
+      margin-top: 50px;
+      width: 80%;
+      height: auto;
   }
   .colorlib-nav #colorlib-logo a {
     color: #00274C; }
