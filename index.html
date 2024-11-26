@@ -522,6 +522,15 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 	<script>
+		function handleClick() {
+			event.preventDefault();
+			window.location.href = 'rfs.html'
+			// Add any additional logic if needed
+			// console.log('Redirecting to rfs.html');
+			// return true; // Allow navigation
+		}
+		</script>
+	<script>
 		// window.onscroll = function() {
 		// 	var nav = document.querySelector('.colorlib-nav');
 		// 	var scrollPos = window.scrollY || document.documentElement.scrollTop;
@@ -545,6 +554,8 @@
     nav.classList.remove('nav-scrolled'); // Transparent when near the top
   }
 });
+
+
 	</script>
 	</body>
 </html>

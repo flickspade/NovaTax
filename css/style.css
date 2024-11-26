@@ -1541,6 +1541,11 @@ background-color: rgba(0, 39, 76, 0.1);
 
 }
 
+/* code for RFS PAGE */
+#message{
+  resize: none;
+}
+
 
 @media (min-width: 1200px) {
   .practiseAreascontainer {
