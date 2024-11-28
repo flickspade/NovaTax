@@ -85,11 +85,17 @@ h1, h2, h3, h4, h5, h6, figure {
   font-family: "Playfair Display", Georgia, serif; }
 
   .colorlib-nav #colorlib-logo a {
-    min-width: 170%;
+    /* min-width: 170%;
     height: 230px;
     display: block;
     margin-top: -150px;
-    margin-left: -315px;
+    margin-left: -315px; */
+
+    min-width: 89%;
+    height: 230px;
+    display: block;
+    margin-top: -92px;
+    margin-left: -157px;
   }
   .colorlib-nav #colorlib-logo a img {
       margin-top: 50px;
@@ -515,7 +521,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #colorlib-content .choose,
 #colorlib-consult .choose {
   width: 50%;
-  padding: 40px 40px; }
+  padding:0px 40px; }
 
 #colorlib-content .choose-form,
 #colorlib-consult .choose-form {
@@ -542,6 +548,34 @@ h1, h2, h3, h4, h5, h6, figure {
       -webkit-box-shadow: none;
       box-shadow: none;
       border-color: #bea34d; }
+#colorlib-consult .chooseContact{
+  padding: 0px 40px;
+  width: 50%
+}
+#colorlib-consult .chooseContact-form{
+  background: #00274C;
+}
+#colorlib-consult .chooseContact-form .colorlib-heading {
+  margin-bottom: 40px; }
+
+.chooseContact-form .colorlib-heading h2 {
+    color: #fff; }
+
+    #colorlib-consult .chooseContact-form .form-control {
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      background: transparent;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      font-size: 20px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.8); }
+      #colorlib-consult .chooseContact-form .form-control:active,
+      #colorlib-consult .chooseContact-form .form-control:focus {
+        outline: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-color: #bea34d; }
+
 
 .progress-bar {
   background-color: #31486f !important;
@@ -560,7 +594,7 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #fff;
   position: relative;
   overflow: hidden; 
-  margin-top: -10%;
+  margin-top: -8.5%;
 }
   @media screen and (max-width: 768px) {
     .third-col {
@@ -623,6 +657,18 @@ h1, h2, h3, h4, h5, h6, figure {
     .services:hover .icon i, .services:focus .icon i {
       color: #a8a200; }
 
+      .services .icon img.hover {
+        display: none; /* Initially hide the hover image */
+    }
+    
+    .services:hover .icon img.default {
+        display: none; /* Hide the default image on hover */
+    }
+    
+    .services:hover .icon img.hover {
+        display: block; /* Show the hover image */
+    }
+
 .colorlib-social-icons {
   margin: 0;
   padding: 0; }
@@ -643,6 +689,11 @@ h1, h2, h3, h4, h5, h6, figure {
       padding-right: 10px; }
       .colorlib-social-icons li a i {
         font-size: 20px; }
+
+.colorlib-contact-info{
+  padding: 40px 40px;
+  margin-top: 200px;
+}
 
 .colorlib-contact-info ul {
   padding: 0;
@@ -1399,7 +1450,14 @@ h1, h2, h3, h4, h5, h6, figure {
 .btnReqSrvs:hover, .btnReqSrvs:focus, .btnReqSrvs:active {
   color: #fff;
   background: #960000 !important;
-  border-color: #960000 !important; }
+  border-color: #960000 !important; 
+}
+
+.btn-cta .active{
+  color: #fff;
+  background: #960000 !important;
+  border-color: #960000 !important; 
+  }
 
   .nav-scrolled {
     background-color:#00274C;  /* A transparent shade of #00274C */
@@ -1545,12 +1603,36 @@ h1, h2, h3, h4, h5, h6, figure {
 background-color: rgba(0, 39, 76, 0.1);
 
 }
+.icon img{
+  width: 100%;
+  height: 100%;
+}
+
 
 /* code for RFS PAGE */
 #message{
   resize: none;
 }
+ 
+.homeServices{
+  text-align: center;
+} 
 
+.form-controldropdown {
+  width: 100%;
+  padding: 10px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  height: 54px;
+  font-size: 18px;
+  font-weight: 300; }
+  .form-controldropdown:active, .form-controldropdown:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #bea34d; }
 
 @media (min-width: 1200px) {
   .practiseAreascontainer {

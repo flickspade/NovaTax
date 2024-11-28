@@ -54,32 +54,31 @@
 					<div class="row">
 						<div class="col-md-2">
 							<div id="colorlib-logo">
-								<img src="images/Primary.png" alt="NovaTax Logo">
+								<a href="index.html"><img src="images/Primary.png" alt="NovaTax Logo" ></a>
 								<!-- <a href="index.html">Nova<span>Tax.</span></a> -->
 							</div>
 						</div>
 						<div class="col-md-10 text-right menu-1">
 							<ul>
 								<li class=""><a href="index.html">Home</a></li>
-								<li><a href="#">Practice Areas</a></li>
-								<!-- <li><a href="about.html">Services</a></li> -->
+								<li><a href="practiseAreas.html">Practice Areas</a></li>
 								<li class="has-dropdown">
 									<a href="">Services</a>
 									<ul class="dropdown">
 										<li><a href="services/businessAdvisory.html">Business Advisory</a></li>
-										<li><a href="#">Bookkeeping</a></li>
-										<li><a href="#">Payroll Services</a></li>
-										<li><a href="#">Taxation of Individuals and Entities</a></li>
-										<li><a href="#">Payroll Tax</a></li>
-										<li><a href="#">BAS</a></li>
-										<li><a href="#">Cashflow Forecast</a></li>
-										<li><a href="#">Business Consultation</a></li>
-										<li><a href="#">Risk Management</a></li>
-										<li><a href="#">Company, Partnerships, Trust, NFP Organisation Registration</a></li>
+										<li><a href="services/bookkeeping.html">Bookkeeping</a></li>
+										<li><a href="services/payrollservice.html">Payroll Service</a></li>
+										<li><a href="services/taxationofindividualentities.html">Taxation of Individuals and Entities</a></li>
+										<li><a href="services/payrolltax.html">Payroll Tax</a></li>
+										<li><a href="services/bas.html">BAS and IAS</a></li>
+										<li><a href="services/cashflowforecast.html">Cashflow Forecast</a></li>
+										<li><a href="services/businessconsultation.html">Business Consultation</a></li>
+										<li><a href="services/riskmanagement.html">Risk Management</a></li>
+										<li><a href="services/nfporganization.html">Company, Partnerships, Trust, NFP Organisation Registration</a></li>
 									</ul>
 								</li>
-								<li><a href="#">Contact</a></li>
-								<li class="btn-cta"><p class="active btn btnReqSrvs " href="rfs.html">Request For Service</p></li>
+								<li><a href="contact.html">Contact</a></li>
+								<li class="btn-cta active"><p class="btn btnReqSrvs" href="rfs.html">Request For Service</p></li>
 							</ul>
 						</div>
 					</div>
@@ -95,33 +94,48 @@
 			<div class="colorlib-heading">
 				<h2>Request For Proposal Of Services</h2>
 			</div>
-			<form action="#">
+			<form action="https://api.web3forms.com/submit" method="POST">
+				<input type="hidden" name="subject" value="New Submission Request For Service Form">
+				<input type="hidden" name="access_key" value="93607976-0cd9-42a2-b5bf-2e9653c47bfc">
+
 				<div class="row form-group">
 					<div class="col-md-6">
 						<!-- <label for="fname">First Name</label> -->
-						<input type="text" id="fname" class="form-control" placeholder="Your firstname">
+						<input name="Name" type="text" id="fname" class="form-control" placeholder="Full Name*" required>
 					</div>
 					<div class="col-md-6">
 						<!-- <label for="lname">Last Name</label> -->
-						<input type="text" id="lname" class="form-control" placeholder="Your lastname">
+						<input name="Contact" type="tel" id="lname" class="form-control" placeholder="Contact Number*" required>
 					</div>
 				</div>
 
 				<div class="row form-group">
 					<div class="col-md-12">
 						<!-- <label for="email">Email</label> -->
-						<input type="text" id="email" class="form-control" placeholder="Your email address">
+						<input name="Email" type="text" id="email" class="form-control" placeholder="Email*" required>
 					</div>
 				</div>
 
 				<div class="row form-group">
 					<div class="col-md-6">
 						<!-- <label for="fname">First Name</label> -->
-						<input type="text" id="cname" class="form-control" placeholder="Company/organization">
+						<input name="Business Name" type="text" id="cname" class="form-control" placeholder="Business Name">
 					</div>
 					<div class="col-md-6">
 						<!-- <label for="lname">Last Name</label> -->
-						<input type="text" id="cjob" class="form-control" placeholder="Position/Job Title">
+						<input name="Position" type="text" id="cjob" class="form-control" placeholder="Position/Job Title">
+					</div>
+				</div>
+
+				
+				<div class="row form-group">
+					<div class="col-md-12">
+						<label for="choices">Services:</label>
+        				<select name="ServiceChosen" class="form-controldropdown" >
+						<option value="Income Tax Service">Income Tax Service</option>
+						<option value="Entity Setup and Company Secreterial Service">Entity Setup and Company Secreterial Service</option>
+						<option value="Accounting and Reporting Service">Accounting and Reporting Service</option>
+        			</select>
 					</div>
 				</div>
 
@@ -130,19 +144,9 @@
 						<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Additional Information"></textarea>
 					</div>
 				</div>
-				<div class="row form-group">
-					<div class="col-md-12">
-						<label for="choices">Choose options:</label>
-        				<select class="form-controldropdown" >
-						<option value="1">Income Tax Service</option>
-						<option value="2">Entity Setup and Company Secreterial Service</option>
-						<option value="3">Accounting and Reporting Service</option>
-        			</select>
-					</div>
-				</div>
 
 				<div class="form-group">
-					<input type="submit" value="Submit Proposal" class="btn btn-primary">
+					<input type="submit" value="Submit Request" class="btn btn-primary">
 				</div>
 
 			</form>	
@@ -214,6 +218,22 @@
  
 	nav.classList.add('nav-scrolled'); // Transparent when near the top
 });
+	</script>
+	<script>
+		if (window.location.pathname.includes("rfs.html")) {
+  const btn = document.querySelector(".btnReqSrvs");
+  if (btn) {
+    btn.style.color = "#fff";
+    btn.style.background = "#960000";
+    btn.style.borderColor = "#960000";
+  }
+}
+	</script>
+	<script>
+		window.onload = function() {
+			// Get the form element and reset it
+			document.querySelector("form").reset();
+		};
 	</script>
 
 	</body>
