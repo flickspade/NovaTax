@@ -1408,9 +1408,10 @@ h1, h2, h3, h4, h5, h6, figure {
 
   .about-list{
     text-align: justify;
-    font-size: 16px;
+    font-size: 18px;
   }
   .about-list li{
+    text-align: justify;
     margin-bottom: 15px; /* Add space between the list items */
     line-height: 1.6; 
     color: #000;
