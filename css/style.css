@@ -668,7 +668,9 @@ h1, h2, h3, h4, h5, h6, figure {
     .services:hover .icon img.hover {
         display: block; /* Show the hover image */
     }
-
+    .services:hover .homeServices li {
+      color: #fff; /* Change the color of li tags inside .homeServices on hover */
+    }
 .colorlib-social-icons {
   margin: 0;
   padding: 0; }
@@ -747,12 +749,12 @@ h1, h2, h3, h4, h5, h6, figure {
         font-size: 35px;
         margin-bottom: 20px;
         line-height: 1.5;
-        color: #10b730;
+        color: #000;
         font-weight: 400; }
         .colorlib-heading-index p {
           font-size: 18px;
           line-height: 1.5;
-          color: #10b730; }
+          color: #000; }
         .colorlib-heading-index span {
           display: block;
           margin-bottom: 10px;
@@ -987,6 +989,9 @@ h1, h2, h3, h4, h5, h6, figure {
   #colorlib-footer .colorlib-footer-links {
     padding: 0;
     margin: 0; }
+  .colorlib-footer-links li  {
+    color: #fff;
+  }
     @media screen and (max-width: 768px) {
       #colorlib-footer .colorlib-footer-links {
         margin-bottom: 30px; } }
@@ -1011,6 +1016,9 @@ h1, h2, h3, h4, h5, h6, figure {
         text-align: left; } }
   #colorlib-footer .copyright .block {
     display: block; }
+  .colorlib-widget p {
+    color: #fff;
+  }
 
 #map {
   width: 100%;
@@ -1384,7 +1392,7 @@ h1, h2, h3, h4, h5, h6, figure {
   opacity: 0; }
 
   .about-us-con-head{
-    color: #1E3E34;
+    color: #000;
     text-align: justify;
     font-size: 18px;
   }
@@ -1617,6 +1625,9 @@ background-color: rgba(0, 39, 76, 0.1);
 .homeServices{
   text-align: center;
 } 
+.homeServices li{
+  color: #000;
+}
 
 .form-controldropdown {
   width: 100%;
