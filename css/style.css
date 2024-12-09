@@ -7,7 +7,7 @@
 
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *
 * ======================================================= */
 body {
@@ -227,7 +227,7 @@ h1, h2, h3, h4, h5, h6, figure {
         color: #960000;
         font-weight: bold;
     }
-      
+
       .colorlib-nav ul li .active> a::after {
         content: '';
         position: absolute;
@@ -321,10 +321,11 @@ h1, h2, h3, h4, h5, h6, figure {
     margin-bottom: 0; }
     #colorlib-hero .flexslider .slides {
       position: relative;
-      overflow: hidden; 
+      overflow: hidden;
       top: -30px;
     }
-      #colorlib-hero .flexslider .slides li {
+      #colorlib-hero .flexslider .slides .backgroundImgs {
+        background-image: url(../images/backgroundImage.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
@@ -593,7 +594,7 @@ h1, h2, h3, h4, h5, h6, figure {
   background: #00274C;
   color: #fff;
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
   margin-top: -8.5%;
 }
   @media screen and (max-width: 768px) {
@@ -660,11 +661,11 @@ h1, h2, h3, h4, h5, h6, figure {
       .services .icon img.hover {
         display: none; /* Initially hide the hover image */
     }
-    
+
     .services:hover .icon img.default {
         display: none; /* Hide the default image on hover */
     }
-    
+
     .services:hover .icon img.hover {
         display: block; /* Show the hover image */
     }
@@ -856,7 +857,7 @@ h1, h2, h3, h4, h5, h6, figure {
   .colorlib-staff h3 {
     font-size: 24px;
     margin-bottom: 5px; }
-/* 
+/*
   .colorlib-staff p {
     margin-bottom: 30px; } */
 
@@ -864,7 +865,7 @@ h1, h2, h3, h4, h5, h6, figure {
     color: #1E3E34;
     margin-bottom: 30px;
     font-weight: normal;
-    display: block; 
+    display: block;
   }
 
 #colorlib-started {
@@ -1173,9 +1174,9 @@ h1, h2, h3, h4, h5, h6, figure {
       transition: all .2s ease-out; }
   .colorlib-nav-toggle.colorlib-nav-white > i {
     color: #fff;
-    background: #000; }
+    }
     .colorlib-nav-toggle.colorlib-nav-white > i::before, .colorlib-nav-toggle.colorlib-nav-white > i::after {
-      background: #000; }
+      color: white; }
 
 .colorlib-nav-toggle i::before {
   top: -7px; }
@@ -1413,7 +1414,7 @@ h1, h2, h3, h4, h5, h6, figure {
   .about-list li{
     text-align: justify;
     margin-bottom: 15px; /* Add space between the list items */
-    line-height: 1.6; 
+    line-height: 1.6;
     color: #000;
 
   }
@@ -1431,7 +1432,7 @@ h1, h2, h3, h4, h5, h6, figure {
     background-color: transparent;
     padding: 0px 0;
   }
-  
+
   .colorlib-nav {
     height: 120px;
     position: fixed;
@@ -1460,13 +1461,13 @@ h1, h2, h3, h4, h5, h6, figure {
 .btnReqSrvs:hover, .btnReqSrvs:focus, .btnReqSrvs:active {
   color: #fff;
   background: #960000 !important;
-  border-color: #960000 !important; 
+  border-color: #960000 !important;
 }
 
 .btn-cta .active{
   color: #fff;
   background: #960000 !important;
-  border-color: #960000 !important; 
+  border-color: #960000 !important;
   }
 
   .nav-scrolled {
@@ -1623,10 +1624,10 @@ background-color: rgba(0, 39, 76, 0.1);
 #message{
   resize: none;
 }
- 
+
 .homeServices{
   padding: 1em 0em 0.7em 0em;
-} 
+}
 .homeServices li{
   color: #000;
 }
@@ -1646,9 +1647,227 @@ background-color: rgba(0, 39, 76, 0.1);
     -webkit-box-shadow: none;
     box-shadow: none;
     border-color: #bea34d; }
+    .navbarclass .has-dropdown .arrow-icon {
+      display: none; /* Hide by default */
+  }
 
 @media (min-width: 1200px) {
   .practiseAreascontainer {
       width: 1170px;
   }
+}
+/* @media (max-width: 431px){
+  .colorlib-nav #colorlib-logo a img{
+    margin-top: 5%;
+    width: 35%;
+    margin-left: 13%;
+  }
+  #colorlib-hero .flexslider .slides li{
+    min-height: 0px;
+  }
+} */
+
+@media screen and (max-width: 768px){
+  .colorlib-nav-white i{
+    /* color: #fff; */
+    position: fixed;
+  }
+  .colorlib-nav #colorlib-logo{
+    width: 100%;
+  }
+  .colorlib-nav #colorlib-logo a{
+    width: inherit;
+    height: inherit;
+  }
+  .slides{
+    height: 40em;
+    width: 100%;
+  }
+  .slides ::after{
+    height: 15em;
+    width: 100%;
+  }
+  /* .slides li{
+    height: 300px;
+  } */
+
+  #colorlib-hero .flexslider{
+    height: 80px;
+  }
+  /* .colorlib-nav #colorlib-logo{
+    size: 20px;
+  } */
+  .colorlib-nav #colorlib-logo a img{
+    margin-top: 8%;
+    width: 8.5em;
+    margin-left: 5em;
+  }
+  #colorlib-hero .flexslider .slides .backgroundImgs{
+    background-image: url(../images/bgImageMobile.png);
+    width: 100%;
+    height: 39em;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  #colorlib-hero{
+    min-height: 40em;
+
+  }
+  #colorlib-intro{
+    margin-top: 8em;
+    margin-left: -1em;
+
+  }
+  .third-col p{
+    font-size: 10px;
+    margin-bottom: 0px
+
+  }
+  .third-col h2{
+    font-size: 12px
+  }
+  #colorlib-practice{
+    padding:0px;
+  }
+  .colorlib-heading-index{
+    margin-top: 1em;
+  }
+  .colorlib-heading-index h2{
+    font-size: 17px;
+  }
+  .colorlib-heading-index p{
+    font-size: 14px;
+  }
+  #intro-bg{
+    margin-top: -9em;
+  }
+  .desc h3{
+    font-size: 17px;
+  }
+  .homeServices li{
+    font-size: 14px;
+  }
+  .card{
+    width: 90%;
+  }
+  #card2{
+    margin-top: -1em;
+  }
+  #card3{
+    width: 90%;
+    margin-top: -0.5em;
+  }
+  #card4{
+    width: 90%;
+    margin-top: -1em;
+  }
+  #card5{
+    width: 90%;
+    margin-top: -0.5em;
+  }
+  #card6{
+    width: 90%;
+    margin-top: -1em;
+  }
+  #card7{
+    width: 90%;
+    margin-top: -0.5em;
+  }
+  #card8{
+    width: 90%;
+    margin-top: -1em;
+  }
+  #card9{
+    width: 90%;
+    margin-top: -0.5em;
+  }
+  #card10{
+    width: 90%;
+    margin-top: -1em;
+  }
+  /* for navbar and request for service btn */
+  .btnReqSrvs{
+    font-size: 15px;
+    margin-left: -3%;
+    padding: 8px 10px;  
+  }
+
+  .dropdown li{
+    font-size: 12px;
+  }
+  .navbarclass li:not(#dropdownServices li) {
+    padding: 10px;
+    margin: 7px;
+    display: block;
+    text-transform: uppercase;
+}
+/* Hide the dropdown menu by default */
+.navbarclass .has-dropdown .dropdown {
+  display: none; /* Hidden by default */
+}
+
+/* Show the dropdown menu when the active class is present */
+.navbarclass .has-dropdown.active .dropdown {
+  display: block; /* Visible when active */
+}
+#colorlib-offcanvas ul li{
+  list-style: disc;
+}
+.services-img img{
+  width: 20%;
+  margin-top: 5em;
+}
+.colorlib-heading{
+  margin-top: 1em;
+}
+.colorlib-heading h2{
+  font-size: 15px;
+}
+#our-Service{
+  margin-left: 0px;
+}
+.side-nav li a {
+  font-size: 12px;
+}
+.about-us-con-head{
+  font-size: 11px;
+}
+.about-list li{
+  font-size: 11px;
+}
+.colorlib-widget{
+  font-size: 10px;
+}
+.colorlib-staff{
+  margin-top: 1em;
+}
+#colorlib-footer h4{
+  font-size: 15px;
+}
+.colorlib-footer-links li{
+  font-size: 10px;
+
+}
+.row-pb-md{
+  padding-bottom: 1em !important;
+}
+#colorlib-footer{
+  padding: 3em 0 6em 0;
+}
+.copyright p small{
+font-size: 80%;
+}
+#colorlib-offcanvas ul li{
+list-style-type: none;
+}
+.offcanvas-has-dropdown :active ul{
+list-style-type: disc;
+}
+#colorlib-consult{
+  margin-top: 6em;
+}
+#colorlib-consult .chooseContact-form{
+  width: 100%;
+
+}
 }
