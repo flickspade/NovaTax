@@ -327,32 +327,34 @@
 
 		</script>
 		<!-- <script>
-			document.addEventListener('DOMContentLoaded', function () {
-				const dropdownServices = document.getElementById('dropdownServices');
-				const dropdownMenu = dropdownServices.querySelector('.dropdown');
-				const links = dropdownServices.querySelectorAll('a');
-			
-				// Function to hide the dropdown menu
-				function hideDropdown() {
-					dropdownServices.classList.remove('active');
-					dropdownMenu.style.display = 'none';
-				}
-			
-				if (dropdownServices.classList.contains('active')) {
-							e.preventDefault();
-							links.forEach(link => {
-					link.addEventListener('click', function (e) {
-						// Check if the class 'offcanvas-has-dropdown active' is present
-							hideDropdown();
+		document.addEventListener("DOMContentLoaded", function () {
+  const dropdownServices = document.getElementById("dropdownServices");
+  const dropdownMenu = dropdownServices.querySelector(".dropdown"); // Select the <ul> element
 
-					
-					});
-				});
-						}
-			
-			});
-			</script>
-			 -->
+  dropdownServices.addEventListener("click", function (event) {
+    event.stopPropagation(); 
+
+    if (dropdownServices.classList.contains("active")) {
+		console.log("Clicked");
+		dropdownServices.addEventListener("click", function (event) {
+			event.stopPropagation(); 
+			  dropdownServices.classList.remove("active");
+      		 dropdownMenu.style.display = "none";
+		});
+    } 
+	else {
+		console.log("Clicked else");
+		    dropdownServices.classList.add("active");
+      		dropdownMenu.style.display = "block";
+  
+    }
+  });
+
+
+});
+
+
+		</script> -->
 	</body>
 </html>
 

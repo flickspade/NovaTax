@@ -1138,23 +1138,29 @@ h1, h2, h3, h4, h5, h6, figure {
       text-decoration: none;
       outline: none; }
 
-.colorlib-nav-toggle {
+/* .colorlib-nav-toggle {
   width: 25px;
   height: 25px;
   cursor: pointer;
   text-decoration: none;
-  top: 25px !important; }
+  top: 25px !important; } */
   .colorlib-nav-toggle.active i::before, .colorlib-nav-toggle.active i::after {
-    background: #444; }
+    background: #fff; 
+    /* background: #444;  */
+  }
   .colorlib-nav-toggle:hover, .colorlib-nav-toggle:focus, .colorlib-nav-toggle:active {
     outline: none;
-    border-bottom: none !important; }
-  .colorlib-nav-toggle i {
+    border-bottom: none !important; 
+  }
+  /* .colorlib-loader a{
+    background: #fff;
+  } */
+  /* .colorlib-nav-toggle i {
+    background: #fff; 
     position: relative;
     display: inline-block;
     width: 25px;
     height: 2px;
-    color: #252525;
     font: bold 14px/.4 Helvetica;
     text-transform: uppercase;
     text-indent: -55px;
@@ -1166,19 +1172,48 @@ h1, h2, h3, h4, h5, h6, figure {
       content: '';
       width: 25px;
       height: 2px;
-      background: #252525;
+      background: #fff; 
       position: absolute;
       left: 0;
       -webkit-transition: all .2s ease-out;
       -o-transition: all .2s ease-out;
-      transition: all .2s ease-out; }
+      transition: all .2s ease-out; 
+    } */
+    .colorlib-nav-toggle i {
+      position: relative;
+      display: inline-block;
+      width: 25px;
+      height: 2px; /* Line thickness */
+      background: #fff; /* Line color */
+      transition: all 0.2s ease-out;
+    }
   .colorlib-nav-toggle.colorlib-nav-white > i {
     color: #fff;
     }
     .colorlib-nav-toggle.colorlib-nav-white > i::before, .colorlib-nav-toggle.colorlib-nav-white > i::after {
       color: white; }
 
-.colorlib-nav-toggle i::before {
+      .colorlib-nav-toggle i::before {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        background: #fff; /* Line color */
+        top: -7px; /* Position above the middle line */
+        left: 0;
+        transition: all 0.2s ease-out;
+      }
+      .colorlib-nav-toggle i::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        background: #fff; /* Line color */
+        bottom: -7px; /* Position below the middle line */
+        left: 0;
+        transition: all 0.2s ease-out;
+      }
+/* .colorlib-nav-toggle i::before {
   top: -7px; }
 
 .colorlib-nav-toggle i::after {
@@ -1188,9 +1223,28 @@ h1, h2, h3, h4, h5, h6, figure {
   top: -10px; }
 
 .colorlib-nav-toggle:hover i::after {
-  bottom: -10px; }
+  bottom: -10px; } */
+
+  .colorlib-nav-toggle:hover i::before {
+    top: -10px;
+  }
+  
+  .colorlib-nav-toggle:hover i::after {
+    bottom: -10px;
+  }
+  
+  /* Active state - transform to an 'X' */
+  .colorlib-nav-toggle.active i {
+    background: transparent; /* Middle line disappears */
+  }
+  
+  .colorlib-nav-toggle.active i::before {
+    top: 0;
+    transform: rotate(45deg); /* Rotate the top line */
+  }
 
 .colorlib-nav-toggle.active i {
+  background: #fff; 
   background: transparent; }
 
 .colorlib-nav-toggle.active i::before {
@@ -1211,7 +1265,7 @@ h1, h2, h3, h4, h5, h6, figure {
   transform: rotateZ(-45deg);
   background: #fff; }
 
-.colorlib-nav-toggle {
+/* .colorlib-nav-toggle {
   position: absolute;
   right: 0px;
   top: 65px;
@@ -1223,7 +1277,21 @@ h1, h2, h3, h4, h5, h6, figure {
   height: 44px;
   width: 44px;
   z-index: 2001;
-  border-bottom: none !important; }
+  border-bottom: none !important; 
+} */
+.colorlib-nav-toggle {
+  position: absolute;
+  right: 0px;
+  top: 0.5%;
+  /* z-index: 21; */
+  padding: 6px 0 0 0;
+  display: none; /* Initially hidden for larger screens */
+  margin: 0 auto;
+  height: 44px;
+  width: 44px;
+  z-index: 2001;
+  border-bottom: none !important;
+}
   @media screen and (max-width: 768px) {
     .colorlib-nav-toggle {
       display: block; } }
@@ -1651,6 +1719,10 @@ background-color: rgba(0, 39, 76, 0.1);
       display: none; /* Hide by default */
   }
 
+  #colorlib-offcanvas{
+    background-color: #00274C;
+  }
+
 @media (min-width: 1200px) {
   .practiseAreascontainer {
       width: 1170px;
@@ -1698,8 +1770,8 @@ background-color: rgba(0, 39, 76, 0.1);
     size: 20px;
   } */
   .colorlib-nav #colorlib-logo a img{
-    margin-top: 8%;
-    width: 8.5em;
+    margin-top: 12%;
+    width: 6.7em;
     margin-left: 5em;
   }
   #colorlib-hero .flexslider .slides .backgroundImgs{
@@ -1795,21 +1867,32 @@ background-color: rgba(0, 39, 76, 0.1);
   .dropdown li{
     font-size: 12px;
   }
+  #colorlib-offcanvas .active a:not(.dropdown li a){
+    color:white;
+  }
+  #colorlib-offcanvas ul li .active a{
+    color:white
+  }
   .navbarclass li:not(#dropdownServices li) {
     padding: 10px;
     margin: 7px;
     display: block;
     text-transform: uppercase;
 }
+
 /* Hide the dropdown menu by default */
-.navbarclass .has-dropdown .dropdown {
-  display: none; /* Hidden by default */
-}
+/* .navbarclass .has-dropdown .dropdown {
+  display: none; 
+} */
 
 /* Show the dropdown menu when the active class is present */
-.navbarclass .has-dropdown.active .dropdown {
-  display: block; /* Visible when active */
-}
+/* .navbarclass .has-dropdown.active .dropdown {
+  display: block; 
+} */
+
+/* .navbarclass .offcanvas-has-dropdown .active .dropdown {
+  display: none;
+} */
 #colorlib-offcanvas ul li{
   list-style: disc;
 }
