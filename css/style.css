@@ -1740,6 +1740,12 @@ background-color: rgba(0, 39, 76, 0.1);
 } */
 
 @media screen and (max-width: 768px){
+  .colorlib-nav{
+    height: 4em;
+  }
+  .nav-scrolled{
+    height: 4em;
+  }
   .colorlib-nav-white i{
     /* color: #fff; */
     position: fixed;
@@ -1947,7 +1953,7 @@ list-style-type: none;
 list-style-type: disc;
 }
 #colorlib-consult{
-  margin-top: 6em;
+  margin-top: 4em;
 }
 #colorlib-consult .chooseContact-form{
   width: 100%;
